@@ -88,6 +88,7 @@
           found = true;
         }
       }
+      
       return false;
     },
 
@@ -237,18 +238,11 @@
           return true;
         }
       }
-      // for (y = 0; y < n; y++) {
-      //   if (this.checkMinorDiagonal(x, y)) {
-
-      //     return true;
-      //   }
-      // }
-      // y = 0;
-      // for (x = n; x >= 0; x--) {
-      //   if (this.checkMinorDiagonal(x, y)) {
-      //     return true;
-      //   }
-      // }
+      for (var i = 0; i < n; i++) {
+        if (this.checkMinorDiagonal(n-1, i)) {
+          return true;
+        }
+      }
       return false; // fixme
     },
 
